@@ -6,6 +6,11 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
+
+gem 'jquery-rails'
+
 gem 'pg'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -78,3 +83,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "cssbundling-rails", "~> 1.1"
