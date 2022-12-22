@@ -9,7 +9,8 @@
 #   end
 # end
 require 'spec_helper'
-require './spec/support/utilities.rb'
+include ApplicationHelper
+# require './spec/support/utilities.rb'
 
 RSpec.describe "UserPages", type: :request do
   subject { response.body }
