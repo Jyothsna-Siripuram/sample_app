@@ -81,6 +81,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'factory_girl_rails', '~> 4.9'
 end
 
 gem "cssbundling-rails", "~> 1.1"

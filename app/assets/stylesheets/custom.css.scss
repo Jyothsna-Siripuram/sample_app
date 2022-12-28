@@ -68,7 +68,7 @@ p {
 /* footer */
 
 footer {
-	margin-top: 45px;
+	margin-top: 20px;
 	padding-top: 5px;
 	border-top: 1px solid $grayMediumLight;
 	color: $lightGray;
@@ -106,8 +106,83 @@ ul.navbar-nav.ms-auto {
 div.center.hero-unit {
 	background-color: #f1f1f1;
 	border: 1px solid transparent;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     .sign-up-now{
     	margin: 10px;
     }
+}
+
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* miscellaneous */
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin: 5px 0px 10px 0px;
+	padding: 10px;
+	@include box_sizing;
+}
+.rails_image {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+  	height: 230px;
+}
+
+/* sidebar */
+aside {
+	section {
+		padding: 10px 0;
+		border-top: 1px solid $lightGray;
+		&:first-child {
+			border: 0;
+			padding-top: 0;
+		}
+		span {
+			display: block;
+			margin-bottom: 3px;
+			line-height: 1;
+		}
+		h1 {
+			font-size: 1.6em;
+			text-align: left;
+			letter-spacing: -1px;
+			margin-bottom: 3px;
+		}
+	}
+}
+.gravatar {
+	float: left;
+	margin-right: 10px;
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	padding: 10px;
+	height: auto;
+	margin-bottom: 15px;
+	@include box_sizing;
+}
+.container_form {
+	padding: 0px 100px;
+    margin: 0px 100px;
+}
+#error_explanation {
+	color: #f00;
+	ul {
+		list-style: none;
+		margin: 0 0 18px 0;
+	}
+}
+.field_with_errors {
+	@extend .control-group !optional;
+	@extend .error !optional;
 }
