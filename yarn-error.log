@@ -2,7 +2,7 @@ Arguments:
   /usr/bin/node /usr/share/yarn/bin/yarn.js add v1.22.19
 
 PATH: 
-  /home/jyothsna/.rbenv/plugins/ruby-build/bin:/home/jyothsna/.rbenv/shims:/home/jyothsna/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+  ./bin:/home/jyothsna/.rbenv/plugins/ruby-build/bin:/home/jyothsna/.rbenv/shims:/home/jyothsna/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 
 Yarn version: 
   1.22.19
