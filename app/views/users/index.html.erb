@@ -1,0 +1,5 @@
+<% if @users.any? %>
+	<% @users.each do |u| %>
+		<p> <%= u.name %> </p>
+ 	<% end %>
+<% end %>

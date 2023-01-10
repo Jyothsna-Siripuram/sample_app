@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-
+    @users = User.all
   end
 
   def new
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       p "#{@user.name} created successfully!"
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Hi #{@user.name}, Welcome to the Sample App!"
       redirect_to @user
     else
       p "#{@user.errors.full_messages}"

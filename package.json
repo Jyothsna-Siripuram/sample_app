@@ -1,0 +1,11 @@
+{
+  "name": "sample_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Jyothsna-Siripuram/sample_app.git",
+  "author": "Jyothsna-Siripuram <s92jyothsna@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
+}
