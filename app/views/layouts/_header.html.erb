@@ -5,7 +5,22 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
         <li class="nav-item"><%= link_to "Help", help_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to "Sign in", "#", class: "nav-link" %></li>
+        <% if signed_in? %>
+          <li class="nav-item"><%= link_to "Users", '#', class: "nav-link" %></li>
+          <li class="nav-item">
+            <div class="dropdown show nav-link">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account <b class="caret"></b></a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item dropdown-links"><%= link_to "Profile", current_user %></div>
+                <div class="dropdown-item dropdown-links"><%= link_to "Settings", '#' %></div>
+                <div class="dropdown-item dropdown-links"><%= link_to "Sign out", signout_path, method: "delete" %></div>
+              </div>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item"><%= link_to "Sign in", signin_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>

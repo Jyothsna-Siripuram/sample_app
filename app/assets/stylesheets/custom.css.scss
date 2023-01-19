@@ -186,3 +186,19 @@ input, textarea, select, .uneditable-input {
 	@extend .control-group !optional;
 	@extend .error !optional;
 }
+.dropdown-links {
+	display: block;
+    position: relative;
+    padding: 0px;
+    margin: 1px;
+}
+.dropdown-menu {
+	padding: 12px 0px;
+	min-width: 130px;
+	text-align: center;
+}
+.nav-link {
+	.btn{
+		padding: 0px 12px;
+	}
+}

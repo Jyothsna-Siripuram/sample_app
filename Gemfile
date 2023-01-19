@@ -82,6 +82,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'factory_girl_rails', '~> 4.9'
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 end
 
 gem "cssbundling-rails", "~> 1.1"

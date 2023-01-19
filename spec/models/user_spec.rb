@@ -6,12 +6,14 @@
 #  email           :string
 #  name            :string
 #  password_digest :string
+#  remember_token  :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
 # Indexes
 #
-#  index_users_on_email  (email) UNIQUE
+#  index_users_on_email           (email) UNIQUE
+#  index_users_on_remember_token  (remember_token)
 #
 require 'rails_helper'
 
@@ -26,6 +28,7 @@ RSpec.describe User, type: :model do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
 
   it { should be_valid}
@@ -121,5 +124,10 @@ RSpec.describe User, type: :model do
       @user.save
       @user.reload.email.should == mixed_case_email.downcase
     end
+  end
+
+  describe "remember token" do
+    before { @user.save }
+    it(:remember_token) { should_not be_blank }
   end
 end
